@@ -1,82 +1,84 @@
 'use client';
 
 import Image from 'next/image';
+import { Cormorant_Garamond, Manrope } from 'next/font/google';
+
+const headlineFont = Cormorant_Garamond({
+    subsets: ['latin'],
+    weight: ['500', '600', '700'],
+});
+
+const bodyFont = Manrope({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+});
 
 export default function Home() {
     return (
-        <section className="min-h-screen bg-gradient-to-br from-gray-50 to-white px-6 py-20 md:py-32">
-            <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    {/* Left Content */}
-                    <div className="flex flex-col justify-center space-y-8">
-                        {/* Headline */}
-                        <div>
-                            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
-                                All-time
-                                <br />
-                                <span className="text-orange-500">Highest Rated</span>
-                                <br />
-                                Recipes
-                            </h1>
-                            <p className="text-lg text-gray-600 max-w-md leading-relaxed">
-                                We source sustainable & line caught seafood, as well as live crustaceans everyday.
-                            </p>
-                        </div>
+        <section id="home" className={`${bodyFont.className} relative isolate min-h-screen overflow-hidden`}>
+            <Image
+                src="/lamika-bg.jpg"
+                alt="Lamika dining space"
+                fill
+                priority
+                className="object-cover"
+            />
 
-                        {/* App Store Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                            <a
-                                href="#"
-                                className="inline-flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-                            >
-                                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M17.05 13.5c-.02-1.62.74-3.12 2.04-3.99-.84-.7-2.04-1.1-3.27-1.1-2.73 0-5.01 1.97-5.34 4.58H8.5c-.49 0-.96.07-1.4.21V6.5C7.1 5.12 8.22 4 9.6 4h4.8c1.38 0 2.5 1.12 2.5 2.5v7zm-5.72-2.24h2.72c-.29-.96-.98-1.72-1.86-2.03-.88.31-1.57 1.07-1.86 2.03z" />
-                                </svg>
-                                Download on the App Store
-                            </a>
-                            <a
-                                href="#"
-                                className="inline-flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-                            >
-                                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M3 13.5h8v8H5.5a2.5 2.5 0 0 1-2.5-2.5v-5.5zm17.84-9.34c.1.1.16.23.16.38 0 .35-.29.64-.64.64-.15 0-.28-.06-.38-.16L3.5 20.5l-.5-.5L19.84 4.16z" />
-                                </svg>
-                                Get it on Google Play
-                            </a>
-                        </div>
+            <div className="absolute inset-0 bg-emerald-950/56" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/56 via-black/36 to-black/12" />
+
+            <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+                <div className="max-w-2xl">
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-100/80">
+                        Lamika Cafe and Restaurant
+                    </p>
+
+                    <h1 className={`${headlineFont.className} mt-5 text-5xl leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl`}>
+                        Where cravings meet their
+                        <span className="text-emerald-200"> perfect match</span>
+                    </h1>
+
+                    <p className="mt-5 max-w-xl text-base leading-relaxed text-emerald-50/88 sm:text-lg">
+                        A refined dining experience in Moalboal, crafted with fresh ingredients and warm service from
+                        first bite to last.
+                    </p>
+
+                    <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                        <a
+                            href="#menu"
+                            className="inline-flex items-center justify-center rounded-full bg-emerald-200 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-emerald-950 transition-colors duration-200 hover:bg-emerald-100"
+                        >
+                            View Menu
+                        </a>
+                        <a
+                            href="#location"
+                            className="inline-flex items-center justify-center rounded-full border border-emerald-100/60 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-emerald-50 transition-colors duration-200 hover:bg-white/10"
+                        >
+                            Reserve
+                        </a>
                     </div>
+                </div>
 
-                    {/* Right Visual Element */}
-                    <div className="flex flex-col items-center justify-center">
-                        <div className="relative w-full max-w-md">
-                            {/* Main Circle with Image */}
-                            <div className="relative w-100 h-100 mx-auto rounded-full overflow-hidden shadow-2xl">
-                                <Image
-                                    src="/featured-dish.jpg"
-                                    alt="Featured Dish"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </div>
+                <div className="mx-auto w-full max-w-[26rem] lg:justify-self-end">
+                    <div className="overflow-hidden rounded-[2rem] border border-white/25 bg-white/10 p-3 shadow-[0_38px_72px_-36px_rgba(0,0,0,0.86)] backdrop-blur-sm">
+                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
+                            <Image
+                                src="/featured-dish.jpg"
+                                alt="Lamika featured dish"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
 
-                            {/* Sample Order Card */}
-                            <div className="absolute bottom-0 right-0 bg-white rounded-xl shadow-xl p-4 w-62 transform translate-y-12">
-                                <div className="space-y-3">
-                                    <div className="flex justify-between items-start">
-                                        <div>
-                                            <h3 className="font-bold text-gray-900">Somatian Drink</h3>
-                                            <p className="text-sm text-gray-500">Delicious Somatian Drink</p>
-                                        </div>
-                                        <span className="text-lg font-bold text-gray-900">$10.00</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-sm">
-                                        <span className="text-yellow-400">★ 4.3 very Good</span>
-                                        <span className="text-gray-500">(117)</span>
-                                    </div>
-                                    <p className="text-xs text-gray-600">2.5 km away · Free Delivery</p>
-                                </div>
+                        <div className="mt-3 flex items-center justify-between px-1 pb-1">
+                            <div>
+                                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-emerald-200/85">
+                                    Chef&apos;s Recommendation
+                                </p>
+                                <p className="mt-1 text-sm font-semibold text-white">Signature Seafood Pasta</p>
                             </div>
+                            <p className="text-lg font-semibold text-emerald-100">$18</p>
                         </div>
                     </div>
                 </div>
