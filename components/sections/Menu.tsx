@@ -247,12 +247,12 @@ export default function Menu() {
                 </div>
             </div>
 
-            <div className="mt-5 flex items-center justify-center gap-2 md:hidden">
+            <div className="relative z-50 mt-5 flex items-center justify-center gap-2 md:hidden">
                 <button
                     type="button"
                     onClick={goToPrevious}
                     aria-label="Previous menu item"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1e5f46]/25 bg-white text-[#1e5f46] shadow-sm"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1e5f46]/25 bg-white text-[#1e5f46] shadow-sm transition-transform active:scale-90"
                 >
                     <ArrowLeft size={18} strokeWidth={2.5} />
                 </button>
@@ -260,7 +260,7 @@ export default function Menu() {
                     type="button"
                     onClick={goToNext}
                     aria-label="Next menu item"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1e5f46]/25 bg-white text-[#1e5f46] shadow-sm"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1e5f46]/25 bg-white text-[#1e5f46] shadow-sm transition-transform active:scale-90"
                 >
                     <ArrowRight size={18} strokeWidth={2.5} />
                 </button>
