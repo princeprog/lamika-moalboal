@@ -28,6 +28,7 @@ export default function NavBar() {
         { href: '#home', label: 'Home' },
         { href: '#about-us', label: 'About Us' },
         { href: '#menu', label: 'Menu' },
+        { href: '#gallery', label: 'Gallery' },
         { href: '#location', label: 'Location' },
     ];
 
@@ -92,15 +93,15 @@ export default function NavBar() {
                         </div>
 
                         <Link
-                            href="#location"
-                            onClick={(e) => handleScrollTo(e, '#location')}
+                            href="#contact"
+                            onClick={(e) => handleScrollTo(e, '#contact')}
                             className={`hidden md:inline-flex items-center justify-center rounded-full border px-5 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] transition-all duration-300 hover:scale-105 active:scale-95 ${
                                 isScrolled 
                                 ? 'border-emerald-100/55 text-emerald-50 hover:bg-emerald-50 hover:text-emerald-950' 
                                 : 'border-emerald-400/30 text-emerald-50 bg-emerald-900/20 hover:bg-emerald-400 hover:text-emerald-950'
                             }`}
                         >
-                            Reserve
+                            Contact
                         </Link>
 
                         <button
@@ -130,11 +131,11 @@ export default function NavBar() {
                                 ))}
                             </div>
                             <Link
-                                href="#location"
-                                onClick={(e) => handleScrollTo(e, '#location')}
+                                href="#contact"
+                                onClick={(e) => handleScrollTo(e, '#contact')}
                                 className="mt-3 inline-flex w-full items-center justify-center rounded-lg border border-emerald-100/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-50 transition-colors duration-200 hover:bg-emerald-50 hover:text-emerald-950"
                             >
-                                Reserve
+                                Contact
                             </Link>
                         </div>
                     )}

@@ -17,7 +17,7 @@ const bodyFont = Manrope({
 
 export default function Footer() {
     return (
-        <footer className={`${bodyFont.className} bg-[#f6f2eb] text-[#133a2b]/80 py-20 px-6 md:px-12 relative isolate overflow-hidden`}>
+        <footer id="contact" className={`${bodyFont.className} bg-[#f6f2eb] text-[#133a2b]/80 py-20 px-6 md:px-12 relative isolate overflow-hidden`}>
             {/* Subtle background texture for a premium tactile feel */}
             <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/paper.png")` }} />
             
