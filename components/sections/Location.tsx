@@ -36,16 +36,18 @@ export default function Location() {
                 <div className="flex flex-col gap-24">
                     
                     {/* --- Part 1: The Narrative Header --- */}
-                    <div className="grid lg:grid-cols-[1fr_0.8fr] gap-12 items-end">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-100px" }}
+                        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                        className="grid lg:grid-cols-[1fr_0.8fr] gap-12 items-end"
+                    >
                         <div className="space-y-8">
-                            <motion.div 
-                                initial={{ opacity: 0, x: -10 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                className="flex items-center gap-4 text-[#1e5f46]"
-                            >
+                            <div className="flex items-center gap-4 text-[#1e5f46]">
                                 <div className="h-px w-12 bg-[#1e5f46]/30" />
                                 <span className="text-[0.6rem] font-black uppercase tracking-[0.5em]">The Terminal Point</span>
-                            </motion.div>
+                            </div>
                             
                             <BlurText
                                 text="Where your sensory journey begins"
@@ -59,7 +61,7 @@ export default function Location() {
                                 A curated space in the heart of Basdiot, designed to bridge luxury and coastal heritage. <span className="text-[#133a2b]">Accessible directly from Panagsama Road.</span>
                              </p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* --- Part 2: The Core Interface --- */}
                     <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-4">
@@ -142,13 +144,18 @@ export default function Location() {
                     </div>
 
                     {/* --- Part 3: Meta Verification --- */}
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-[#133a2b]/10 pt-16">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        className="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-[#133a2b]/10 pt-16"
+                    >
                         <div className="flex gap-12 text-[0.6rem] font-black uppercase tracking-[0.4em] text-[#133a2b]/20">
                             <span className="flex items-center gap-2 underline decoration-emerald-400/30">Verified Point // B.Moalboal</span>
                             <span className="flex items-center gap-2">Update: April 2024</span>
                         </div>
                         <p className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-[#133a2b]/30">© Lamika Cafe Sensory Lab</p>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

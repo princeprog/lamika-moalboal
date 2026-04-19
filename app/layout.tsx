@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "A premium coastal dining experience in Moalboal.",
 };
 
+import SmoothScroll from "@/components/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,8 +32,10 @@ export default function RootLayout({
     >
 
       <body className="min-h-full flex flex-col">
-        <NavBar />
-        <main className="flex-1">{children}</main>
+        <SmoothScroll>
+          <NavBar />
+          <main className="flex-1">{children}</main>
+        </SmoothScroll>
       </body>
     </html>
   );

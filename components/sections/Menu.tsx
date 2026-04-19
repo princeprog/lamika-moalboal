@@ -93,7 +93,13 @@ export default function Menu() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_2%_2%,rgba(24,120,73,0.08),transparent_40%)]" />
             
             <div className="relative z-10 mx-auto max-w-7xl px-6">
-                <div className="mb-12 flex items-end justify-between gap-4 md:mb-16">
+                <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, margin: "-100px" }}
+                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                    className="mb-12 flex items-end justify-between gap-4 md:mb-16"
+                >
                     <div>
                         <span className="mb-3 block text-[0.7rem] font-bold uppercase tracking-[0.3em] text-[#1e5f46]">Gastronomy</span>
                         <h2 className={`${headlineFont.className} text-5xl leading-none text-[#133a2b] sm:text-6xl md:text-7xl`}>
@@ -120,7 +126,7 @@ export default function Menu() {
                             <ArrowRight size={20} />
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div 
