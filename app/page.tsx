@@ -3,6 +3,7 @@ import Home from "@/components/sections/Home";
 import Menu from "@/components/sections/Menu";
 import Location from "@/components/sections/Location";
 import Gallery from "@/components/sections/Gallery";
+import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Aboutus/>
       <Gallery/>
       <Location/>
+      <Footer/>
     </div>
   );
 }
