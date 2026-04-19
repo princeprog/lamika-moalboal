@@ -23,8 +23,8 @@ const visitDetails = [
 
 export default function Location() {
     return (
-        <section 
-            id="location" 
+        <section
+            id="location"
             className={`${bodyFont.className} relative isolate bg-[#f6f2eb] pt-32 pb-48 overflow-hidden`}
         >
             {/* Massive Background Typography for Editorial Depth */}
@@ -34,9 +34,9 @@ export default function Location() {
 
             <div className="mx-auto max-w-[1500px] px-6 lg:px-12 relative z-10">
                 <div className="flex flex-col gap-24">
-                    
+
                     {/* --- Part 1: The Narrative Header --- */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-100px" }}
@@ -48,7 +48,7 @@ export default function Location() {
                                 <div className="h-px w-12 bg-[#1e5f46]/30" />
                                 <span className="text-[0.6rem] font-black uppercase tracking-[0.5em]">The Terminal Point</span>
                             </div>
-                            
+
                             <BlurText
                                 text="Where your sensory journey begins"
                                 className={`${headlineFont.className} text-7xl md:text-[8rem] leading-[0.85] tracking-tighter text-[#133a2b] max-w-4xl`}
@@ -57,19 +57,19 @@ export default function Location() {
                         </div>
 
                         <div className="pb-4">
-                             <p className="max-w-[400px] text-lg text-[#1e5f46]/70 leading-relaxed font-medium">
+                            <p className="max-w-[400px] text-lg text-[#1e5f46]/70 leading-relaxed font-medium">
                                 A curated space in the heart of Basdiot, designed to bridge luxury and coastal heritage. <span className="text-[#133a2b]">Accessible directly from Panagsama Road.</span>
-                             </p>
+                            </p>
                         </div>
                     </motion.div>
 
                     {/* --- Part 2: The Core Interface --- */}
                     <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-4">
-                        
+
                         {/* Info Column */}
                         <div className="grid gap-4">
                             {visitDetails.map((detail, idx) => (
-                                <motion.div 
+                                <motion.div
                                     key={detail.label}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -107,22 +107,22 @@ export default function Location() {
                         </div>
 
                         {/* Map Column */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             className="relative rounded-[2.5rem] overflow-hidden bg-white shadow-2xl border-[16px] border-white group"
                         >
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8765176579104!2d123.37753641026508!3d9.944230890117273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe8efab6aa863%3A0x53a65f2e84a006b1!2sPanagsama%20Rd%2C%20Moalboal%2C%20Cebu!5e1!3m2!1sen!2sph!4v1776574668172!5m2!1sen!2sph" 
-                                width="100%" 
-                                height="100%" 
-                                style={{ border: 0, filter: 'contrast(1.05) brightness(1.05) saturate(0.95)' }} 
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8765176579104!2d123.37753641026508!3d9.944230890117273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe8efab6aa863%3A0x53a65f2e84a006b1!2sPanagsama%20Rd%2C%20Moalboal%2C%20Cebu!5e1!3m2!1sen!2sph!4v1776574668172!5m2!1sen!2sph"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0, filter: 'contrast(1.05) brightness(1.05) saturate(0.95)' }}
                                 className="min-h-[600px] transition-all duration-1000 group-hover:scale-110"
-                                allowFullScreen 
-                                loading="lazy" 
+                                allowFullScreen
+                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
-                            
+
                             {/* Floating Map Label */}
                             <div className="absolute top-10 left-10 p-6 rounded-2xl bg-[#0a251c]/90 backdrop-blur-md text-white border border-white/10 shadow-2xl flex items-center gap-4">
                                 <div className="h-10 w-10 flex items-center justify-center rounded-full bg-emerald-400 text-[#0a251c]">
@@ -135,16 +135,16 @@ export default function Location() {
                             </div>
 
                             {/* Coordinate Scan Line (Pure Aesthetic) */}
-                            <motion.div 
-                                animate={{ y: ['0%', '100%'] }} 
+                            <motion.div
+                                animate={{ y: ['0%', '100%'] }}
                                 transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                                className="absolute top-0 left-0 w-full h-[2px] bg-emerald-400/20 z-20 pointer-events-none" 
+                                className="absolute top-0 left-0 w-full h-[2px] bg-emerald-400/20 z-20 pointer-events-none"
                             />
                         </motion.div>
                     </div>
 
                     {/* --- Part 3: Meta Verification --- */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
