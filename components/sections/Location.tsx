@@ -113,14 +113,14 @@ export default function Location() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            className="relative rounded-[2.5rem] overflow-hidden bg-emerald-950 shadow-2xl border-[16px] border-emerald-900/50 group"
+                            className="relative rounded-[2.5rem] overflow-hidden bg-white shadow-2xl border-[12px] border-white group"
                         >
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8765176579104!2d123.37753641026508!3d9.944230890117273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe8efab6aa863%3A0x53a65f2e84a006b1!2sPanagsama%20Rd%2C%20Moalboal%2C%20Cebu!5e1!3m2!1sen!2sph!4v1776574668172!5m2!1sen!2sph"
                                 width="100%"
                                 height="100%"
-                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.9) contrast(1.2)' }}
-                                className="min-h-[600px] transition-all duration-1000 group-hover:scale-110"
+                                style={{ border: 0 }}
+                                className="min-h-[600px] transition-all duration-1000 group-hover:scale-105"
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
@@ -136,13 +136,6 @@ export default function Location() {
                                     <p className="text-sm font-semibold italic">Basdiot, Moalboal</p>
                                 </div>
                             </div>
-
-                            {/* Coordinate Scan Line (Pure Aesthetic) */}
-                            <motion.div
-                                animate={{ y: ['0%', '100%'] }}
-                                transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                                className="absolute top-0 left-0 w-full h-[2px] bg-emerald-400/20 z-20 pointer-events-none"
-                            />
                         </motion.div>
                     </div>
 
