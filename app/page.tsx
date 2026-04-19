@@ -10,6 +10,7 @@ export default function HomePage() {
       <Home/>
       <Menu/>
       <Aboutus/>
+      <Gallery/>
       <Location/>
     </div>
   );

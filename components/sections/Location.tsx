@@ -25,10 +25,10 @@ export default function Location() {
     return (
         <section
             id="location"
-            className={`${bodyFont.className} relative isolate bg-[#f6f2eb] pt-32 pb-48 overflow-hidden`}
+            className={`${bodyFont.className} relative isolate bg-[#133a2b] min-h-screen flex flex-col justify-center py-32 overflow-hidden`}
         >
             {/* Massive Background Typography for Editorial Depth */}
-            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black uppercase tracking-tighter text-[#133a2b]/[0.02] select-none pointer-events-none whitespace-nowrap`}>
+            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black uppercase tracking-tighter text-white/[0.02] select-none pointer-events-none whitespace-nowrap`}>
                 Arrival 09.94°
             </div>
 
@@ -44,21 +44,21 @@ export default function Location() {
                         className="grid lg:grid-cols-[1fr_0.8fr] gap-12 items-end"
                     >
                         <div className="space-y-8">
-                            <div className="flex items-center gap-4 text-[#1e5f46]">
-                                <div className="h-px w-12 bg-[#1e5f46]/30" />
+                            <div className="flex items-center gap-4 text-emerald-400">
+                                <div className="h-px w-12 bg-emerald-400/30" />
                                 <span className="text-[0.6rem] font-black uppercase tracking-[0.5em]">The Terminal Point</span>
                             </div>
 
                             <BlurText
                                 text="Where your sensory journey begins"
-                                className={`${headlineFont.className} text-7xl md:text-[8rem] leading-[0.85] tracking-tighter text-[#133a2b] max-w-4xl`}
+                                className={`${headlineFont.className} text-7xl md:text-[8rem] leading-[0.85] tracking-tighter text-white max-w-4xl`}
                                 delay={30}
                             />
                         </div>
 
                         <div className="pb-4">
-                            <p className="max-w-[400px] text-lg text-[#1e5f46]/70 leading-relaxed font-medium">
-                                A curated space in the heart of Basdiot, designed to bridge luxury and coastal heritage. <span className="text-[#133a2b]">Accessible directly from Panagsama Road.</span>
+                            <p className="max-w-[400px] text-lg text-emerald-100/60 leading-relaxed font-medium">
+                                A curated space in the heart of Basdiot, designed to bridge luxury and coastal heritage. <span className="text-emerald-300">Accessible directly from Panagsama Road.</span>
                             </p>
                         </div>
                     </motion.div>
@@ -74,18 +74,18 @@ export default function Location() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="p-10 rounded-[2rem] bg-white shadow-sm border border-[#133a2b]/5 group hover:bg-[#133a2b] transition-all duration-500"
+                                    className="p-10 rounded-[2rem] bg-white/5 backdrop-blur-sm shadow-xl border border-white/10 group hover:bg-emerald-400 transition-all duration-500"
                                 >
                                     <div className="flex flex-col gap-6">
                                         <div className="flex items-center justify-between">
-                                            <div className="text-[#1e5f46] group-hover:text-emerald-300 transition-colors">
+                                            <div className="text-emerald-400 group-hover:text-emerald-950 transition-colors">
                                                 {detail.icon}
                                             </div>
-                                            <span className="text-[0.55rem] font-black uppercase tracking-[0.3em] text-[#1e5f46]/40 group-hover:text-white/40 transition-colors">
+                                            <span className="text-[0.55rem] font-black uppercase tracking-[0.3em] text-emerald-100/30 group-hover:text-emerald-950/40 transition-colors">
                                                 {detail.label}
                                             </span>
                                         </div>
-                                        <p className={`${headlineFont.className} text-3xl text-[#133a2b] group-hover:text-white transition-colors`}>
+                                        <p className={`${headlineFont.className} text-3xl text-white group-hover:text-emerald-950 transition-colors`}>
                                             {detail.value}
                                         </p>
                                     </div>
@@ -97,12 +97,15 @@ export default function Location() {
                                 target="_blank"
                                 rel="noreferrer"
                                 whileHover={{ gap: '2rem' }}
-                                className="flex items-center justify-between p-10 rounded-[2rem] bg-emerald-100 text-[#133a2b] group transition-all"
+                                className="flex items-center justify-between p-10 rounded-[2rem] bg-emerald-400 text-emerald-950 group transition-all"
                             >
-                                <span className="text-sm font-black uppercase tracking-[0.2em]">Start Navigation</span>
-                                <div className="h-12 w-12 rounded-full bg-[#133a2b] text-white flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-transform duration-500">
-                                    <ArrowUpRight size={24} />
+                                <div className="flex items-center gap-6">
+                                    <div className="p-4 rounded-full bg-emerald-950 text-emerald-400">
+                                        <Navigation size={24} />
+                                    </div>
+                                    <span className="text-xl font-bold uppercase tracking-widest">Get Directions</span>
                                 </div>
+                                <ArrowUpRight size={32} className="opacity-40" />
                             </motion.a>
                         </div>
 
@@ -110,13 +113,13 @@ export default function Location() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            className="relative rounded-[2.5rem] overflow-hidden bg-white shadow-2xl border-[16px] border-white group"
+                            className="relative rounded-[2.5rem] overflow-hidden bg-emerald-950 shadow-2xl border-[16px] border-emerald-900/50 group"
                         >
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8765176579104!2d123.37753641026508!3d9.944230890117273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33abe8efab6aa863%3A0x53a65f2e84a006b1!2sPanagsama%20Rd%2C%20Moalboal%2C%20Cebu!5e1!3m2!1sen!2sph!4v1776574668172!5m2!1sen!2sph"
                                 width="100%"
                                 height="100%"
-                                style={{ border: 0, filter: 'contrast(1.05) brightness(1.05) saturate(0.95)' }}
+                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.9) contrast(1.2)' }}
                                 className="min-h-[600px] transition-all duration-1000 group-hover:scale-110"
                                 allowFullScreen
                                 loading="lazy"
@@ -126,11 +129,11 @@ export default function Location() {
                             {/* Floating Map Label */}
                             <div className="absolute top-10 left-10 p-6 rounded-2xl bg-[#0a251c]/90 backdrop-blur-md text-white border border-white/10 shadow-2xl flex items-center gap-4">
                                 <div className="h-10 w-10 flex items-center justify-center rounded-full bg-emerald-400 text-[#0a251c]">
-                                    <Navigation size={20} />
+                                    <MapPin size={20} />
                                 </div>
-                                <div className="space-y-0.5">
-                                    <p className="text-[0.55rem] font-black uppercase tracking-widest text-emerald-300">Target Reached</p>
-                                    <p className="text-sm font-bold font-mono">Basdiot, Moalboal</p>
+                                <div>
+                                    <p className="text-[0.6rem] font-bold uppercase tracking-widest text-emerald-400">Location Tag</p>
+                                    <p className="text-sm font-semibold italic">Basdiot, Moalboal</p>
                                 </div>
                             </div>
 
@@ -148,13 +151,16 @@ export default function Location() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
-                        className="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-[#133a2b]/10 pt-16"
+                        className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-white/10"
                     >
-                        <div className="flex gap-12 text-[0.6rem] font-black uppercase tracking-[0.4em] text-[#133a2b]/20">
-                            <span className="flex items-center gap-2 underline decoration-emerald-400/30">Verified Point // B.Moalboal</span>
-                            <span className="flex items-center gap-2">Update: April 2024</span>
+                        <div className="flex gap-8 text-[0.6rem] font-black uppercase tracking-[0.4em] text-emerald-100/20">
+                            <span>GPS: 10.3157 N</span>
+                            <span>ALT: 24m MSL</span>
                         </div>
-                        <p className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-[#133a2b]/30">© Lamika Cafe Sensory Lab</p>
+                        <div className="h-px flex-grow bg-white/5 hidden md:block" />
+                        <p className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-emerald-400 bg-white/5 px-4 py-2 rounded-full">
+                            Operational Status: Online
+                        </p>
                     </motion.div>
 
                 </div>
