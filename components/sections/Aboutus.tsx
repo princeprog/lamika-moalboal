@@ -58,10 +58,10 @@ export default function Aboutus() {
     const yImg = useTransform(scrollYProgress, [0, 1], [-60, 60]);
 
     return (
-        <section
-            id="about-us"
+        <section 
+            id="about-us" 
             ref={containerRef}
-            className={`${bodyFont.className} bg-[#133a2b] px-6 py-28 pb-40 md:px-12 md:py-40 relative isolate overflow-hidden`}
+            className={`${bodyFont.className} bg-[#133a2b] px-6 md:px-12 min-h-screen flex flex-col justify-center relative isolate overflow-hidden py-32`}
         >
             {/* --- Architectural Grid & Grain --- */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40L40 0M0 0l40 40' fill='none' stroke='%23ffffff' stroke-width='0.5'/%3E%3C/svg%3E")` }} />
@@ -111,7 +111,7 @@ export default function Aboutus() {
                         <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] bg-emerald-950 shadow-2xl">
                             <motion.div style={{ y: yImg }} className="relative h-[120%] w-full">
                                 <Image
-                                    src="/dining-experience.jpg"
+                                    src="/experience.jpg"
                                     alt="Dining experience"
                                     fill
                                     className="object-cover scale-110 filter grayscale-[0.2] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-100"
