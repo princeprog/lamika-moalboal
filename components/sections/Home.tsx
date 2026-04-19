@@ -17,7 +17,7 @@ const bodyFont = Manrope({
 
 export default function Home() {
     return (
-        <section id="home" className={`${bodyFont.className} flex flex-col w-full bg-[#133a2b]`}>
+        <section id="home" className={`${bodyFont.className} flex flex-col w-full bg-[#1e5f46]`}>
             {/* --- HERO SECTION ---  */}
             {/* Clean Flexbox structure. No absolute positioning overlaps for content. */}
             <div className="relative h-screen min-h-[600px] w-full flex flex-col justify-between pt-32 pb-16 md:pb-20 px-6 md:px-12">
@@ -39,9 +39,9 @@ export default function Home() {
                         />
                     </motion.div>
                     {/* Gradients to ensure text legibility */}
-                    <div className="absolute inset-0 bg-emerald-950/20" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#133a2b] via-emerald-950/40 to-[#133a2b]/60" />
-                    <div className="dot-grain absolute inset-0 opacity-[0.15]" />
+                    <div className="absolute inset-0 bg-emerald-950/10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e5f46] via-emerald-950/20 to-transparent" />
+                    <div className="dot-grain absolute inset-0 opacity-[0.1]" />
                 </div>
                 
                 {/* Top Ribbons / Headers */}
@@ -97,7 +97,7 @@ export default function Home() {
 
             {/* --- LAB / BRAND NARRATIVE SECTION --- */}
             {/* Regular flow section. No absolute positioning overlaps with the hero. */}
-            <div className="w-full relative z-20 bg-[#133a2b] border-t border-white/5">
+            <div className="w-full relative z-20 bg-[#1e5f46] border-t border-white/5">
                 {/* Brand Marquee line separator */}
                 <div className="flex w-full overflow-hidden bg-emerald-950/80 py-4 md:py-6 border-b border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
                     <div className="flex animate-marquee whitespace-nowrap gap-12 md:gap-24 px-12 text-[0.6rem] md:text-[0.7rem] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-emerald-400/50">
